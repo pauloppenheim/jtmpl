@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
+#from setuptools import setup, find_packages
 
 import os
 
@@ -27,14 +28,15 @@ long_description = (read('README.rst'))
 
 setup(
     name='jtmpl',
-    version='0.1.0',
+    version='0.1.0.4',
     description='commandline app for quickly running jsontemplate',
     long_description=long_description,
-    #packages=['jtmpl'],
-    #py_modules=['jtmpl'],
     scripts=['jtmpl'],
+    #py_modules=['jtmpl'],
+    #packages = find_packages(),
     provides=['jtmpl'],
     requires=['jsontemplate'],
+    install_requires=['jsontemplate'],
     license="BSD",
     author='Paul Oppenheim',
     author_email='poppy@pauloppenheim.com',
@@ -54,5 +56,6 @@ setup(
         "Topic :: Software Development :: Build Tools",
         "Topic :: Software Development :: Pre-processors",
         "Topic :: Text Processing"
-    ]
+    ],
+    zip_safe = True
 )
