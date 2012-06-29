@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 from distutils.core import setup
 
@@ -23,39 +22,34 @@ THERE IS NO WINNING WITH INSTALLERS.
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-long_description = (
-    read('README.rest')
-    + '\n' +
-    read('CHANGES.rest')
-    + '\n' +
-    'Download\n'
-    '--------\n'
-    )
+long_description = (read('README.rst'))
 
 
-setup(name='jtmpl',
+setup(
+    name='jtmpl',
     version='0.1.0',
     description='commandline app for quickly running jsontemplate',
     long_description=long_description,
-    author='Paul Oppenheim',
-    author_email='poppy@pauloppenheim.com',
-    url='http://www.pauloppenheim.com/projects/jtmpl/',
     #packages=['jtmpl'],
     #py_modules=['jtmpl'],
     scripts=['jtmpl'],
-    requires=['jsontemplate'],
     provides=['jtmpl'],
+    requires=['jsontemplate'],
     license="BSD",
-    keywords='jtmpl json template templating jsontemplate',
+    author='Paul Oppenheim',
+    author_email='poppy@pauloppenheim.com',
+    url='http://www.pauloppenheim.com/projects/jtmpl/',
+    keywords=['jtmpl', 'json', 'template', 'templating', 'jsontemplate'],
     classifiers=[
+        "Programming Language :: Python",
+        "Programming Language :: Unix Shell",
         "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+        "Development Status :: 2 - Pre-Alpha",
         "Environment :: Console",
         "Intended Audience :: Developers",
         "Intended Audience :: Information Technology",
         "Intended Audience :: System Administrators",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python",
-        "Programming Language :: Unix Shell",
         "Topic :: Text Processing :: Markup :: HTML",
         "Topic :: Software Development :: Build Tools",
         "Topic :: Software Development :: Pre-processors",
